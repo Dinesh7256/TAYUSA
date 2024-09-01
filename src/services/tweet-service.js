@@ -14,6 +14,7 @@ class TweetService {
 
 async create(data){
     const content = data.content;
+    console.log(content);
     // const tags = content.match(/#[a-za-9_]+/g); 
     // const tags = content.match(/#[a-z0-9_]+/g)
     //             .map((tag) => tag.substring(1).toLowerCase());

@@ -9,13 +9,26 @@ import {connect} from './config/database.js'
 // const Tweet = require('./models/tweet');
 import service from './services/tweet-service.js'
 
+import apiRoutes from './routes/index.js';
+
 // const HashtagRepository = require('./repository/hashtag-repository'); 
 const app = express();
-
 const serverSetup = async() =>{
     
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
+    app.use('/api', apiRoutes);
+
+    // app.post('/api/v1/tweets', (req, res) => {
+    //     // Handle the POST request
+    //     res.send('My first #tweet #api');
+    // });
+
+    // app.post('/api/v1/tweets', (req, res) => {
+    //     const tweet = req.body;
+    //     console.log('Received tweet:', tweet);
+    //     res.send('Tweet received');
+    // });
 
     app.listen(PORT, ()=>{
         console.log(`Server started at PORT: ${PORT}`);
@@ -47,7 +60,7 @@ const serverSetup = async() =>{
     //     }
     // });
     let ser = new service();
-    await ser.create({content: "my other #coDE is #work or #NOT"});
+    await ser.create({content: "This is #checkingcode #apiNotworking"});
 
 }
 
