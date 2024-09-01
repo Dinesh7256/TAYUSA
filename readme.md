@@ -19,6 +19,6 @@ IF POSSIBLE -Retweeting
     -Bio
     -Last post from the user
 
--pagination on tweets
+-pagination on posts/tweets
 
 

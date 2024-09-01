@@ -1,4 +1,5 @@
 import Tweet from "../models/tweet.js";
+// const Tweet = require('../models/tweet.js');
 class CrudRepository {
     constructor(model) {
         this.model = model;
@@ -45,15 +46,15 @@ class CrudRepository {
         }
     }
 
-    async update(id, data) {
-        try {
-            const result = await this.model.findByIdAndUpdate(id, data, {new: true});
-            return result;
-        } catch(error) {
-            console.log("Something went wrong in crud repo");
-            throw error;
-        }
-    }
+    // async update(id, data) {
+    //     try {
+    //         const result = await this.model.findByIdAndUpdate(id, data, {new: true});
+    //         return result;
+    //     } catch(error) {
+    //         console.log("Something went wrong in crud repo");
+    //         throw error;
+    //     }
+    // }
 
 }
 
