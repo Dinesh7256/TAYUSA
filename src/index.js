@@ -47,7 +47,7 @@ const serverSetup = async() =>{
     //     }
     // });
     let ser = new service();
-    await ser.create({content: "Done with #refactor?"});
+    await ser.create({content: "my other #coDE is #work or #NOT"});
 
 }
 

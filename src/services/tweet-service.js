@@ -15,8 +15,12 @@ class TweetService {
 async create(data){
     const content = data.content;
     // const tags = content.match(/#[a-za-9_]+/g); 
-    const tags = content.match(/#[a-z0-9_]+/g) //this regex extracts hashtags
-                        .map((tag) => tag.substring(1).toLowerCase());
+    // const tags = content.match(/#[a-z0-9_]+/g)
+    //             .map((tag) => tag.substring(1).toLowerCase());
+
+    const tags = content.match(/#[a-z0-9_]+/g)?.map((tag) => tag.substring(1).toLowerCase()) || [];
+
+
     // console.log(tags);
     const tweet = await this.tweetRepository.create(data);
     // const alreadyPresentTags = this.hashtagRepository.findByName(tags);
