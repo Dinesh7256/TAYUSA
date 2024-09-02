@@ -1,0 +1,79 @@
+.shorts-container {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .short-video {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .video {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  }
+  
+  .video-info {
+    color: #fff;
+    z-index: 2;
+  }
+  
+  .video-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .video-description {
+    font-size: 14px;
+    margin: 5px 0 0;
+    opacity: 0.8;
+  }
+  
+  .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px; /* Added to space out buttons */
+    z-index: 2;
+  }
+  
+  .action-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .action-icon {
+    font-size: 24px;
+    margin-bottom: 5px; 
+  }
+  
+  .action-label {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  

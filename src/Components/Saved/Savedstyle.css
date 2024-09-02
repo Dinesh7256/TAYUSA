@@ -1,0 +1,38 @@
+.saved-container {
+  padding: 20px;
+  margin-left: 200px;
+}
+
+.saved-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.saved-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.saved-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.saved-video,
+.saved-photo {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.saved-title {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
