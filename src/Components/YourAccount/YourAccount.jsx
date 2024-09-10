@@ -7,7 +7,7 @@ const YourAccount = () => {
       <div className="account-sidebar">
         <div className="profile-section">
           <img className="profile-pic" src={jack} alt="Profile" />
-          <h2 className="username">InnovoteX</h2>
+          <h2 className="username">InnovateX</h2>
         </div>
         <div className="account-options">
           <ul>
@@ -36,11 +36,9 @@ const YourAccount = () => {
          <h3><i class="fa fa-sticky-note-o"></i> Publish Post</h3>
          <p>Create and upload post</p>
          </div>
-
         </div>
       </div>
     </div>
   );
 }
-
 export default YourAccount;

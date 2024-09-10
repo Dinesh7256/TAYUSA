@@ -1,90 +1,127 @@
+/* Account Container */
 .account-container {
-    display: flex;
-    min-height: 100vh;
-    background-color: #f9f9f9;
-    margin-left: 200px;
-  }
-  
-  .account-sidebar {
-    width: 250px;
-    background-color: #fff;
-    border-right: 1px solid #e0e0e0;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-section {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .profile-pic {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-bottom: 10px;
-  }
-  
-  .username {
-    font-size: 18px;
-    color: #333;
-  }
-  
-  .account-options ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .account-options ul li {
-    padding: 10px 0;
-    font-size: 16px;
-    color: #555;
-    cursor: pointer;
-    border-bottom: 1px solid #e0e0e0;
-    transition: background-color 0.2s;
-  }
-  
-  .account-options ul li:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .account-content {
-    flex-grow: 1;
-    padding: 40px;
-    
-  }
-  
-  .account-content h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+  display: flex;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  margin-left: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for 3D effect */
+  transition: box-shadow 0.3s ease;
+}
 
-  }
-  
-  .overview-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    cursor: pointer;
-  }
-  
-  .overview-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .overview-item h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #007bff;
-  }
-  
-  .overview-item p {
-    font-size: 14px;
-    color: #666;
-  }
-  
-  
+.account-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Sidebar */
+.account-sidebar {
+  width: 250px;
+  background-color: #fff;
+  border-right: 1px solid #e0e0e0;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.account-sidebar:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Section */
+.profile-section {
+  text-align: center;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.profile-section:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Profile Picture */
+.profile-pic {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 4px solid 03045e; /* Border with brand color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for 3D effect */
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Username */
+.username {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Account Options */
+.account-options ul {
+  list-style: none;
+  padding: 0;
+}
+
+.account-options ul li {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #555;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s, transform 0.2s;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+.account-options ul li:hover {
+  background-color: #f0f0f0;
+  transform: translateX(5px); /* Slide effect */
+}
+
+/* Account Content */
+.account-content {
+  flex-grow: 1;
+  padding: 40px;
+}
+
+/* Section Title */
+.account-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow for 3D effect */
+}
+
+/* Overview Section */
+.overview-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.overview-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.overview-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+.overview-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.overview-item p {
+  font-size: 14px;
+  color: #666;
+}

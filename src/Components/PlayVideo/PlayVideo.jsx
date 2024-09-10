@@ -1,18 +1,17 @@
 import React from 'react'
 import './PlayVideo.css'
-import video1 from '../../assets/video2.mp4'
+import video1 from '../../assets/java1.mp4'
 import like from '../../assets/like.png'
 import dislike from '../../assets/dislike.png'
 import share from '../../assets/share.png'
 import save from '../../assets/save.png'
 import jack from '../../assets/jack.png'
 import user_profile from '../../assets/user_profile.jpg'
-
 const PlayVideo = () => {
   return (
     <div className='play-video'>
       <video src={video1} controls autoPlay muted></video>
-      <h3>Best Youtube channel To learn Web Development</h3>
+      <h3>Java Development course for beginners</h3>
       <div className="play-video-info">
         <p>1525 views &bull; 2 days ago</p>
         <div>
@@ -26,7 +25,7 @@ const PlayVideo = () => {
       <div className="publisher">
         <img src={jack} alt=""/>
         <div>
-            <p>InnovoteX</p>
+            <p>InnovateX</p>
             <span>1K Subscribers</span>
         </div>
         <button>Subscribe</button>
@@ -64,5 +63,4 @@ const PlayVideo = () => {
     </div>
   )
 }
-
-export default PlayVideo
+export default PlayVideo;

@@ -1,44 +1,112 @@
 .content-container {
-  max-width: 800px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin-left: 200px;
- 
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  max-width: 600px; /* Increased width for better space */
+  margin: 0 auto;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Light gradient for depth */
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.6); /* Neumorphic shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 70px;
 }
 
-.content-section {
-  margin-bottom: 20px;
+.content-container:hover {
+  transform: translateY(-8px); /* Lift effect on hover */
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -8px -8px 16px rgba(255, 255, 255, 0.8); /* Deeper shadow on hover */
 }
 
-.content-title {
-  font-size: 24px;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.content-description {
+.content-input {
+  width: calc(100% - 10px);
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow for depth */
+  resize: none;
+  margin-bottom: 15px;
   font-size: 16px;
-  line-height: 1.5;
-  color: #666;
+  display: inline-block;
+  vertical-align: top;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.photo-section {
-  margin-bottom: 20px;
+.content-input:focus {
+  border: 1px solid #0073b1; /* Highlight border on focus */
+  box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.2); /* Enhanced focus shadow */
 }
 
-.content-photo {
+.content-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.add-photo-video {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.add-photo-video span {
+  font-size: 26px;
+  color: #0073b1;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-photo-video:hover {
+  color: #005f8c; /* Darker blue on hover */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+.add-photo-video input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
   width: 100%;
-  border-radius: 8px;
+  height: 100%;
+  cursor: pointer;
 }
 
-.video-section {
-  margin-bottom: 20px;
+.post-button {
+  padding: 12px 25px;
+  background-color: #0073b1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15); /* Button shadow for depth */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.content-video {
+.post-button:hover {
+  background-color: #005f8c; /* Darker blue on hover */
+  transform: translateY(-3px); /* Lift on hover */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.preview-section {
+  margin-top: 15px;
+}
+
+.preview-image,
+.preview-video {
   width: 100%;
+  max-height: 300px;
   border-radius: 8px;
+  margin-top: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for images/videos */
+}
+
+.preview-image:hover,
+.preview-video:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }

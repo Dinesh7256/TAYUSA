@@ -1,126 +1,176 @@
-.play-video{
-    flex-basis:69%;
+/* Video Container */
+.play-video {
+    flex-basis: 69%;
     margin-left: 200px;
+    padding: 20px;
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Gradient background for depth */
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7); /* 3D shadow */
+    transition: box-shadow 0.3s ease;
 }
-.play-video video{
 
-    width:100%;
-    height:500px;
+.play-video:hover {
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.8); /* Enhanced shadow on hover */
 }
 
-.play-video h3{
-    margin-top:10px;
+/* Video Styling */
+.play-video video {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* 3D effect on video */
+}
+
+/* Video Title */
+.play-video h3 {
+    margin-top: 10px;
     font-weight: 600;
     font-size: 22px;
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
 }
-.play-video-info
-{
-    display:flex;
+
+/* Video Info Section */
+.play-video-info {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     margin-top: 10px;
     font-size: 14px;
     color: #5a5a5a;
 }
-.play-video-info img{
+
+.play-video-info img {
     width: 20px;
     margin-right: 8px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2)); /* 3D effect on icons */
 }
-.play-video-info span{
 
-    display:inline-flex;
+.play-video-info span {
+    display: inline-flex;
     align-items: center;
     margin-left: 15px;
 }
-.play-video hr
-{
-     border:0;
-     height: 1px;
-     background: #ccc;
-     margin:10px 0;
+
+/* Horizontal Divider */
+.play-video hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
 }
-.publisher
-{
-    align-items: center;
+
+/* Publisher Section */
+.publisher {
     display: flex;
-    margin-top: 20px;    
+    align-items: center;
+    margin-top: 20px;
 }
-.publisher div
-{
-    flex:1;
+
+.publisher div {
+    flex: 1;
     line-height: 18px;
 }
-.publisher img{
-    width:40px;
-    border-radius:50%;
-    margin-right:15px;
-}
-.publisher div p{
-    color:#000;
-    font-weight: 600;
-    font-size:18px;
-}
-.publisher button{
-    background: red;
-    color:#fff;
-    padding :8px 30px;
-    border:0;
-    outline:0;
-    border-radius: 4px;
-    cursor:pointer;
-}
-.vid-description{
-    padding-left:55px;
-    margin:15px 0;
-}
-.vid-description p{
-    font-size:14px;
-    margin-bottom:5px;
-    color:#5a5a5a;
-}
-.vid-description h4{
-    font-size:14px;
-    margin-top:15px;
-    color:#5a5a5a;
-}
-.comment{
-    display:flex;
-    align-items:flex-start;
-    margin:20px 0;
-}
-.comment img
-{
-    width:35px;
+
+.publisher img {
+    width: 40px;
     border-radius: 50%;
     margin-right: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* 3D effect on profile picture */
 }
-.comment h3{
-    font-size:14px;
-    margin-bottom:2px;
+
+.publisher div p {
+    color: #000;
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
 }
-.comment h3 span
-{
-   font-size: 12px;
-   color:#5a5a5a;
-   font-weight: 500;
-   margin-left:8px;
+
+.publisher button {
+    background: linear-gradient(145deg, red, #ff4d4d); /* Gradient button */
+    color: #fff;
+    padding: 8px 30px;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* 3D button effect */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-.comment-action
-{
-  display:flex;
-  align-items:center;
-  margin:8px 0;
-  font-size:14px;  
+
+.publisher button:hover {
+    background: linear-gradient(145deg, #ff4d4d, red);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
-.comment-action img
-{
-  border-radius: 0;
-  width:20px;
-  margin-right:5px;
+
+/* Video Description */
+.vid-description {
+    padding-left: 55px;
+    margin: 15px 0;
 }
-.comment-action span
-{
-   margin-right: 20px;
-   color:#5a5a5a;
+
+.vid-description p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #5a5a5a;
+}
+
+.vid-description h4 {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #5a5a5a;
+}
+
+/* Comments Section */
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.comment img {
+    width: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 3D effect on profile picture */
+}
+
+.comment h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #333;
+}
+
+.comment h3 span {
+    font-size: 12px;
+    color: #5a5a5a;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+/* Comment Actions */
+.comment-action {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.comment-action img {
+    width: 20px;
+    margin-right: 5px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.2)); /* 3D effect on icons */
+}
+
+.comment-action span {
+    margin-right: 20px;
+    color: #5a5a5a;
+}
+
+/* Hover Effects for Buttons and Icons */
+.comment-action img:hover,
+.play-video-info img:hover {
+    transform: scale(1.1); /* Slight scaling for interactive feel */
+    transition: transform 0.3s ease;
 }

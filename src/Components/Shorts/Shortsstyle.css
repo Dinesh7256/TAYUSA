@@ -1,79 +1,125 @@
 .shorts-container {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .short-video {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-  }
-  
+  width: 100%;
+  max-width: 350px;
+  margin: 20px auto;
+  position: relative;
+  perspective: 1000px; /* Enables 3D effects */
+}
+
+.short-video {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px; /* Slightly larger border radius for a smoother appearance */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.short-video:hover {
+  transform: scale(1.05) rotateY(10deg); /* 3D scale and slight rotation on hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.video {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.video:hover {
+  transform: scale(1.02); /* Slight zoom on hover */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
+  border-radius: 15px; /* Ensure the overlay matches the video shape */
+  transition: background 0.3s ease;
+}
+
+.overlay:hover {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3)); /* Darken the overlay on hover */
+}
+
+.video-info {
+  color: #fff;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+.video-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.video-title:hover {
+  color: #1da1f2; /* Adds color to the title on hover */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.video-description {
+  font-size: 14px;
+  margin: 5px 0 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.video-description:hover {
+  opacity: 1; /* Increase opacity on hover */
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  z-index: 2;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.action-button:hover {
+  transform: scale(1.1); /* Scale the button on hover */
+  color: white ;/* Change the button color on hover */
+  background-color: black;
+}
+
+.action-icon {
+  font-size: 26px;
+  margin-bottom: 5px;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.4)); /* Adds 3D effect to icons */
+}
+
+.action-label {
+  font-size: 12px;
+  margin-top: 5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Adds shadow to label */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
   .video {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
+      height: 350px; /* Adjust height for smaller screens */
   }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-  }
-  
-  .video-info {
-    color: #fff;
-    z-index: 2;
-  }
-  
-  .video-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .video-description {
-    font-size: 14px;
-    margin: 5px 0 0;
-    opacity: 0.8;
-  }
-  
-  .actions {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px; /* Added to space out buttons */
-    z-index: 2;
-  }
-  
-  .action-button {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-  }
-  
-  .action-icon {
-    font-size: 24px;
-    margin-bottom: 5px; 
-  }
-  
-  .action-label {
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  
+}

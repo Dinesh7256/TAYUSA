@@ -8,7 +8,7 @@ import Login from './Pages/login/Login';
 import Shorts from './Components/Shorts/Shorts';
 import Saved from './Components/Saved/Saved';
 import YourAccount from './Components/YourAccount/YourAccount';
-import Content1 from './Components/Content/Content1';
+import Content1 from './Components/Content/Content';
 
 const App = () => {
   const [sidebar, setSidebar] = useState(true);
@@ -19,13 +19,12 @@ const App = () => {
         <Route path='/' element={<MainLayout />}>
           <Route path='/home' element={<Feed />} />
           <Route path='home/video/20/4521' element={<PlayVideo />} />
+          <Route path='home/video/20/2321' element={<PlayVideo />} />
           <Route path='/cards' element={<Cards />} />
           <Route path='/shorts' element={<Shorts />} />
           <Route path='/content' element={<Content1 />} />
           <Route path='/saved' element={<Saved />} />
-          <Route path='/Your Account' element={<YourAccount />} />
-        
-          
+          <Route path='/your-account' element={<YourAccount />} />    
         </Route>
         <Route path='/login' element={<Login />} />
       </Routes>

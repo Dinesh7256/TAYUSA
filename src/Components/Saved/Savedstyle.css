@@ -1,38 +1,90 @@
 .saved-container {
   padding: 20px;
   margin-left: 200px;
+  background-color: #eef3f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.saved-grid h2{
+  font-size: 30px;
+  padding-bottom:5px;
+  margin-left:100px;
+}
+
+.saved-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Add depth on hover */
 }
 
 .saved-items {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px; /* Increased gap for better spacing */
 }
 
 .saved-row {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
 .saved-card {
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6); /* Soft gradient background */
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.6); /* Neumorphism shadow */
+  padding: 20px;
   text-align: center;
   width: 100%;
   max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.saved-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), -6px -6px 15px rgba(255, 255, 255, 0.8); /* Enhanced shadow */
 }
 
 .saved-video,
 .saved-photo {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.saved-video:hover,
+.saved-photo:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Shadow effect for depth */
 }
 
 .saved-title {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #333;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Soft text shadow */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.saved-title:hover {
+  color: #1da1f2; /* Change title color on hover */
+  transform: translateY(-3px); /* Slight movement on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .saved-container {
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .saved-row {
+    flex-direction: column;
+  }
+
+  .saved-card {
+    max-width: 100%;
+  }
 }

@@ -1,19 +1,18 @@
 import React from 'react';
 import './Savedstyle.css';
-import video1 from '../../assets/video1.mp4';
-import video2 from '../../assets/video2.mp4';
-import shorts from '../../assets/shorts.mp4';
-
+import video1 from '../../assets/java1.mp4';
+import video2 from '../../assets/webdev.mp4';
+import shorts from '../../assets/shortvideo.mp4';
+import shorts1 from '../../assets/shortvideo1.mp4';
 const Saved = () => {
   
   const savedItems = [
     { id: 1, type: 'video', title: 'Video 1', src: video1 },
     { id: 2, type: 'short', title: 'Short 1', src: shorts },
     { id: 3, type: 'video', title: 'Video 2', src: video2 },
-    { id: 4, type: 'short', title: 'Short 2', src: shorts },
+    { id: 4, type: 'short', title: 'Short 2', src: shorts1 },
     
   ];
-
   return (
     <div className="saved-container">
       <h1>Saved Videos and Shorts</h1>
@@ -50,5 +49,4 @@ const Saved = () => {
     </div>
   );
 };
-
 export default Saved;

@@ -1,20 +1,15 @@
 import React, { useState } from 'react';
 import './Shortsstyle.css';
 import { FaHeart, FaComment, FaShare, FaBookmark } from 'react-icons/fa';
-
-import video1ForYou from '../../assets/shorts.mp4';
-import video1Following from '../../assets/video.mp4';
-
+import video1ForYou from '../../assets/shortvideo.mp4';
+import video1Following from '../../assets/shortvideo.mp4';
 const Shorts = () => {
   const [tab, setTab] = useState('following','forYou'); // State to track the selected tab
-
   const handleTabChange = (newTab) => {
     setTab(newTab);
   };
-
   
   const videoSrc = tab === 'forYou' ? video1ForYou : video1Following;
-
   return (
     <div className="shorts-container">
       <div className="tabs">
@@ -39,8 +34,8 @@ const Shorts = () => {
         </video>
         <div className="overlay">
           <div className="video-info">
-            <p className="video-title">{tab === 'forYou' ? 'Cool Short Video' : 'Another Cool Video'}</p>
-            <p className="video-description">{tab === 'forYou' ? '#shorts #education #technology' : '#shorts #fun #trending'}</p>
+            <p className="video-title">{tab === 'forYou' ? 'Data Patterns in ML' : 'Data Patterns in ML'}</p>
+            <p className="video-description">{tab === 'forYou' ? '#shorts #education #technology' : '#shorts #mlpatterns #learning'}</p>
           </div>
           <div className="actions">
             <button className="action-button">
@@ -65,5 +60,4 @@ const Shorts = () => {
     </div>
   );
 };
-
 export default Shorts;

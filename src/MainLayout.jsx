@@ -3,6 +3,8 @@ import { Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "./Components/sidebar/Sidebar";
 import Navbar from "./Components/Navbar/Navbar";
 
+
+
 function MainLayout() {
   const navigate=useNavigate()
   useEffect(()=>{
@@ -10,9 +12,11 @@ function MainLayout() {
   },[])
   return (
     <div>
-      <Navbar />
+      <Navbar />  
       <Outlet />
       <Sidebar />
+      
+  
     </div>
   );
 }
